@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".peresentation.jobboard.findjob.FindJobFrag">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/fj_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_round"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:drawableTint="@color/blue_dark"
+                android:drawableEnd="@drawable/ic_baseline_search_24"
+                android:hint="Search Jobs"
+                android:textColorHint="@color/gray_dark"
+                android:elevation="5dp"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="25dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"/>
+            <TextView
+                android:id="@+id/fj_category_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fj_search"
+                android:text="Categories"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fj_category_container"
+                android:layout_width="match_parent"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+
+                tools:listitem="@layout/item_poses_list_subcategory"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/fj_category_level"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/fj_recent_job_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Jobs"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/fj_category_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                />
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/grey"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 android:layout_marginHorizontal="15dp"
+                 android:layout_marginTop="2.5dp"
+                 app:layout_constraintTop_toBottomOf="@id/fj_recent_job_level"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fj_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="15dp"
+
+                android:nestedScrollingEnabled="true"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fj_recent_job_level"
+                tools:listitem="@layout/item_fj_recentjob" />
+
+            <ImageView
+                android:id="@+id/no_poses_images"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toBottomOf="@id/fj_recent_job_level"
+                android:elevation="20dp"
+                android:visibility="gone"
+                android:paddingHorizontal="10dp"
+                android:layout_marginVertical="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/no_job_found"
+                android:paddingVertical="5dp"
+                tools:ignore="MissingConstraints" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="valueselected"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/joblay"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".peresentation.jobboard.JobBoardMain">
+
+    />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sliderlay"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:fitsSystemWindows="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+          android:padding="8sp"
+            android:id="@+id/jobboardtop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/sliderlay"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:padding="8sp"
+                android:id="@+id/findjob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/job_text_round"
+                android:backgroundTint="@{valueselected == 0 ? @color/blue : @color/white}"
+                android:paddingVertical="12dp"
+                android:text="Find Job"
+                android:textAlignment="center"
+                android:textColor="@{valueselected == 0 ?  @color/white : @color/black}"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="4sp"
+                app:autoSizeMaxTextSize="100sp" />
+
+            <TextView
+                android:padding="8sp"
+                android:id="@+id/postjob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/job_text_round"
+                android:backgroundTint="@{valueselected == 1 ? @color/blue : @color/white}"
+                android:paddingVertical="12dp"
+                android:text="Post Job"
+                android:textAlignment="center"
+                android:textColor="@{valueselected == 1 ? @color/white : @color/black}"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="4sp"
+                app:autoSizeMaxTextSize="100sp" />
+
+            <TextView
+                android:padding="8sp"
+                android:id="@+id/managejob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/job_text_round"
+                android:backgroundTint="@{valueselected == 2 ? @color/blue : @color/white}"
+                android:paddingVertical="12dp"
+                android:text="Manage Job"
+                android:textAlignment="center"
+                android:textColor="@{valueselected == 2 ? @color/white : @color/black}"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="4sp"
+                app:autoSizeMaxTextSize="100sp" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/JOb_board_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jobboardtop"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <data>
+        <variable
+            name="frag"
+            type="com.dbvertex.job.peresentation.navigate_to_page.freelancer.FreelencerFilter" />
+
+        <variable
+            name="viewmodel"
+            type="com.dbvertex.job.peresentation.navigate_to_page.freelancer.FreelencerUserViewmodel" />
+    </data>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".peresentation.navigate_to_page.freelancer.FreelencerFilter">
+
+     <LinearLayout
+         android:id="@+id/filter_top"
+         android:layout_width="match_parent"
+         android:layout_height="45dp"
+         android:weightSum="3"
+         android:layout_marginVertical="10dp"
+         app:layout_constraintTop_toTopOf="parent"
+         android:orientation="horizontal"
+         tools:ignore="MissingConstraints">
+
+         <ImageView
+             android:id="@+id/close_frag"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1.3"
+             android:padding="3dp"
+             android:layout_marginStart="4dp"
+             android:layout_marginVertical="4dp"
+             android:src="@drawable/ic_baseline_close_24"/>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="CUSTOMISE SEARCH"
+             android:textSize="18sp"
+             android:gravity="center"
+             android:textColor="@color/blue_dark"
+             android:textStyle="bold"
+             android:layout_gravity="center"
+             android:layout_weight="0.4"
+             />
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_weight="1.3"
+             android:gravity="center"
+             android:layout_height="match_parent">
+
+             <LinearLayout
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:layout_marginEnd="10dp"
+                 android:visibility="gone"
+                 android:background="@drawable/cancel_new"
+                 android:backgroundTint="@color/blue_dark">
+                 <ImageView
+                     android:id="@+id/freelencer_filter"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:scaleType="centerInside"
+                     android:src="@drawable/filter"
+                     android:layout_margin="5dp"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"/>
+             </LinearLayout>
+
+
+         </LinearLayout>
+
+
+     </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintTop_toBottomOf="@id/filter_top">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/category_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Category"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginVertical="30dp"
+            android:textColor="@color/blue_dark"
+            android:textSize="18sp"/>
+
+
+        <FrameLayout
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/category_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_text"
+            >
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+        </FrameLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/specialisation_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Specialisation"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:textColor="@color/blue_dark"
+        android:textSize="18sp"/>
+
+
+    <FrameLayout
+        android:id="@+id/fil_Specialiasation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/specialisation_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_text"
+        >
+
+        <Spinner
+            android:id="@+id/fil_speci_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/black"
+            android:inputType="text"
+
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+    </FrameLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/fil_spe_chip_grp_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="25dp"
+            app:layout_constraintTop_toBottomOf="@id/fil_Specialiasation"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/specialisation_chip_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"/>
+
+
+        </HorizontalScrollView>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fil_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:elevation="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/bg_text"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/fil_spe_chip_grp_container"
+            >
+            <ImageView
+                android:id="@+id/add_equipment_iv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_weight="1.7"
+                android:src="@drawable/plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="5dp"
+
+                />
+            <TextView
+                android:id="@+id/add_eqp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Equipments details"
+                android:textSize="18sp"
+                android:layout_marginVertical="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/add_equipment_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/blue_dark"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <HorizontalScrollView
+            android:id="@+id/equipment_chip_container"
+            app:layout_constraintStart_toStartOf="@id/fil_equipment"
+            app:layout_constraintEnd_toEndOf="@id/fil_equipment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintTop_toBottomOf="@id/fil_equipment"
+            android:layout_weight="0.3">
+            <com.google.android.material.chip.ChipGroup
+                app:layout_constraintTop_toBottomOf="@id/add_eqp"
+                android:id="@+id/Equipment_chip_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </HorizontalScrollView>
+        <TextView
+            android:id="@+id/location_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            app:layout_constraintTop_toBottomOf="@id/equipment_chip_container"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/blue_dark"
+            android:textSize="18sp"/>
+
+
+        <EditText
+            android:id="@+id/fil_et_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_text"
+            android:hint="Location"
+            android:textSize="18sp"
+            android:elevation="10dp"
+            android:text="@={viewmodel.mlocation}"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/blue_dark"
+            android:textColorHint="@color/hint_color"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_label"
+            android:padding="10dp"
+            android:backgroundTint="@color/white"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fil_loc_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:elevation="5dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_button"
+            android:padding="2dp"
+            android:backgroundTint="@color/white"
+            tools:listitem="@layout/item_autocomplete"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/fil_et_location"
+            />
+
+        <LinearLayout
+            android:id="@+id/fil_date"
+            app:layout_constraintTop_toBottomOf="@id/fil_loc_rv"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_dark"
+                android:text="Select Date"
+                android:layout_margin="5dp"
+                android:textSize="18sp"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/select_from_time"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1.2"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/fl_from_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="11 : 04 pm"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:textColorHint="@color/blue_gray"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/select_from_Date"
+                        android:layout_width="match_parent"
+                         android:weightSum="2"
+                        android:layout_weight="0.8"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:layout_weight="1"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/fil_date_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="07/06/2021"
+                            android:layout_weight="1"
+                            android:text="@={viewmodel.mfromdate}"
+                            android:background="@null"
+                            android:textColorHint="@color/blue_gray"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_dark"
+                android:text="To"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:textSize="18sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/select_to_time"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.2"
+                    android:weightSum="2"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/fl_to_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:hint="11 : 04 pm"
+                        android:textColorHint="@color/blue_gray"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/select_to_date"
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/fil_date_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={viewmodel.mtodate}"
+                        android:editable="false"
+                        android:layout_weight="1"
+                        tools:text="24/07/1222"
+                        android:hint="07/06/2021"
+                        android:textColorHint="@color/blue_gray"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="15sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fil_Budget"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/fil_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_text"
+            >
+
+            <Spinner
+                android:id="@+id/fil_budget_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/filter_show_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fil_Budget"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_button"
+            android:text="Show Results"
+            android:layout_marginHorizontal="40dp"
+            android:textAlignment="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/blue_dark"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+</layout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_personal"
+        android:title="Edit Personal Profile" />
+
+    <item
+        android:visible="false"
+        android:id="@+id/edit_professional"
+        android:title="Edit Professional Profile" />
+
+    <item
+        android:id="@+id/edit_gallery"
+        android:visible="false"
+        android:title="Gallery" />
+</menu>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+          <variable
+              name="viewHolder"
+              type="com.dbvertex.job.peresentation.navigate_to_page.blog.podcast.PodcastHolder" />
+
+        <variable
+            name="cribResponse"
+            type="com.dbvertex.job.network.response.PodcastDTO" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:paddingHorizontal="10dp"
+    android:layout_marginVertical="2dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_podcast_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textColor="@color/blue_dark"
+        android:textStyle="bold"
+        android:text="@{cribResponse.title}"
+        tools:text="@string/discuss_tip"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/item_podcast_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/item_podcast_title"
+        android:textColor="@color/grey"
+        android:layout_marginVertical="2dp"
+        android:text="@{cribResponse.description}"
+        tools:ignore="MissingConstraints"
+        tools:text="@string/description"
+        />
+
+    <LinearLayout
+        android:id="@+id/audio_ll"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_5"
+        android:backgroundTint="@color/blue_dark"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_podcast_description">
+
+        <ImageView
+            android:id="@+id/progress_image"
+            android:layout_width="20dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:onClick="@{()->viewHolder.playPause()}"
+            android:padding="3dp"
+            android:visibility="@{viewHolder.isLoading ? View.VISIBLE : View.INVISIBLE}" />
+
+        <ImageView
+            android:id="@+id/play_pause_button"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="1dp"
+            android:onClick="@{()->viewHolder.playPause()}"
+            android:src="@{viewHolder.playing ? @drawable/ic_baseline_pause_24 : @drawable/ic_baseline_play_arrow_24}"
+            app:tint="@color/white"
+            tools:src="@drawable/ic_baseline_play_arrow_24" />
+
+        <View
+            android:id="@+id/spacer"
+            android:layout_width="12dp"
+            android:layout_height="25dp"
+            android:onClick="@{()->viewHolder.playPause()}" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:paddingVertical="10dp"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:thumb="@drawable/bg_seekbar_thumb"
+            android:progressDrawable="@drawable/bg_seekbar"
+            tools:progress="0" />
+
+        <TextView
+            android:id="@+id/duration_tv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+    <!--android:text="@{@string/duration(cribResponse.audioDuration)}"-->
+
+
+
+         <TextView
+             android:id="@+id/item_podcast_date"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="@{cribResponse.created}"
+             android:textColor="@color/blue_dark"
+             android:textSize="10sp"
+             android:textStyle="bold"
+             tools:text="23/04/2021"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/audio_ll"
+             android:layout_marginTop="0dp"
+             app:layout_constraintStart_toStartOf="parent"
+             android:layout_marginHorizontal="10dp"
+             tools:ignore="MissingConstraints" />
+
+         <ImageView
+             android:id="@+id/item_podcast_fav"
+             android:layout_width="28dp"
+             android:layout_height="28dp"
+             android:layout_marginHorizontal="10dp"
+             android:layout_marginTop="7dp"
+             android:padding="0dp"
+             android:scaleType="centerInside"
+             android:src="@{cribResponse.favourite ? @drawable/fav_star : @drawable/un_fav_star}"
+             tools:ignore="MissingConstraints"
+             app:layout_constraintTop_toTopOf="@id/item_podcast_date"
+             app:layout_constraintBottom_toBottomOf="@id/item_podcast_date"
+             app:layout_constraintEnd_toStartOf="@id/podcast_download_cv"
+             tools:src="@drawable/fav_star"/>
+
+
+
+         <ImageView
+             android:id="@+id/podcast_download_cv"
+             android:layout_width="28dp"
+             android:layout_height="28dp"
+              android:background="@drawable/fav_star"
+             android:backgroundTint="@color/blue_dark"
+             android:padding="2dp"
+            android:src="@drawable/ic_baseline_arrow_downward_24"
+             app:layout_constraintBottom_toBottomOf="@id/item_podcast_fav"
+             app:layout_constraintTop_toTopOf="@id/item_podcast_fav"
+
+             app:layout_constraintEnd_toEndOf="parent"
+             android:layout_marginHorizontal="10dp"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

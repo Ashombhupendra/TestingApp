@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dbvertex.job.peresentation.auth.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".peresentation.auth.LoginFragment">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/transparent"
+
+            />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+           <androidx.cardview.widget.CardView
+               android:layout_marginTop="8sp"
+               android:layout_gravity="center"
+               app:cardCornerRadius="100dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:elevation="10dp"
+                   android:layout_gravity="center"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"
+                   android:src="@mipmap/ic_launcher"/>
+           </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_marginTop="8sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Welcome to DB Job"
+                android:textColor="@color/blue_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/login_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:alpha="0.9"
+                android:elevation="10dp"
+                android:text="Please enter your mobile number"
+                android:textAlignment="center"
+                android:textColor="@color/blue_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profile_bg_text"
+               android:elevation="20dp"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="@={viewModel.phoneNum}"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="#5E5A5A"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_submit"
+                app:backgroundTint="@color/blue"
+                android:background="@drawable/bg_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:elevation="10dp"
+                android:textColor="@color/white"
+                android:text="Request otp"
+                app:layout_constraintTop_toBottomOf="@id/login_hint"
+                tools:ignore="MissingConstraints" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

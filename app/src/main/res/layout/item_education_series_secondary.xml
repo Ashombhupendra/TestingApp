@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/item_secondary_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="220dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_height="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="15dp"
+        android:elevation="10dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/item_education_secondary_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/place_holder_img"
+                android:scaleType="fitXY"
+                />
+
+
+            <TextView
+                android:id="@+id/item_education_secondary_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build Your own lightroom preset"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:ems="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textAlignment="center"
+
+                tools:ignore="MissingConstraints" />
+            <ImageView
+                android:id="@+id/item_education_unfav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintTop_toTopOf="@id/item_education_secondary_iv"
+                app:layout_constraintEnd_toEndOf="@id/item_education_secondary_iv"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/item_education_fav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_favorite_24"
+                app:layout_constraintTop_toTopOf="@id/item_education_secondary_iv"
+                app:layout_constraintEnd_toEndOf="@id/item_education_secondary_iv"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+               />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

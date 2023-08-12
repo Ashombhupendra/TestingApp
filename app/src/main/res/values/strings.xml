@@ -1,0 +1,94 @@
+<resources>
+    <string name="Apply">Apply</string>
+    <string name="Decline">Decline</string>
+
+    <string name="app_name">DB Job</string>
+    <string name="AllRigts">All right received.</string>
+    <string name="greet">Wellcome to Job Search</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="enter_code_msg">Enter the OTP you received to</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="description">Discover freelancers from all across India. \n\n Find trusted professional like minded photography and Cinematography
+                  realted creatives.</string>
+
+    <string name="welcome">
+<center>Welcome!</center>
+
+</string>
+    <string name="check">
+        Yes! Send me useful information via emails/Whatsapp text to help me get the most out of this platform and beyond.
+    </string>
+    <string name="terms_servies">
+        by clicking this button you agree to the Terms of Services, including the User Agreement and Privacy Policy
+    </string>
+    <string name="com_profile">
+        Complete your profile details
+    </string>
+    <string name="com_pro_demo_img"> <u>CLICK HERE TO VIEW A SAMPLE PROFILE</u>.</string>
+    <string name="company_about">Write about your Company Additional Information about your company and your work/team etc</string>
+
+    <string name="selected_item">Selected item:</string>
+    <string name="why_do_you">Why you want to join this platform and what value you can add to photography community</string>
+    <string name="discuss_tip"> <u>READ this carefully before posting anything !</u></string>
+    <string name="image_permission_rationale">Phototribe requires permission to access Images </string>
+    <string name="post_guidelines">Yes, I have READ ALL <u> PUBLISHING GUIDELINES</u></string>
+    <string name="termsandcondition">Terms &amp; condition</string>
+    <string name="logout_confirm_msg">Are you sure you want to logout \n Your Account?</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout">Log Out</string>
+    <string name="duration">0:00/%s</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="podcast_subtitle">Listen while travelling, working, shooting,etc to learn new trends, techniques, news, tricks, etc.</string>
+    <string name="before_posting">
+       " Our mission at THE PHOTO MENTOR APP is to build an
+        exclusive community of India\'s best visual arts professionals
+        by creating an all inclusive library of India\'s most valuable
+        educational resources, information, experiences, ideas,
+        tutorials, opinions etc. We are dedicated to helping
+        photographers/cinematographers/editors/students
+        build rewarding careers, help improve your craft, and build
+        a tight community. \n
+        RULES: \n
+        - Think before you post! Once your post is up, it\'s up for the
+        world to see and often it is unlikely to be able to get it
+        completely down.\n
+        - A wrong or doubtful answer may result in misleading or
+        confusion.\n
+        - Respect yourself and others the same.\n
+        - No Politics or Political Correctness.\n
+        - Please do not invade people\'s privacy.\n
+        - When answering please try to add value in to the
+        conversation.\n
+        - Be friendly and fair. Use common sense.\n
+        - No cursing and no swearing in this group.\n
+        - Please do not take someone's image and edit it without
+        permission, it is really rude to do so.\n
+        - No nasty, graphic, disturbing media.\n
+        - You may show people what you do but please no
+        advertising at all.\n
+        - We respect each others opinions. Members are free to
+        express themselves unless they violate other rules.\n
+        - Trolling, tasteless, abusive/offensive/aggressive posts,
+        comments and discussions may be removed at the
+        discretion of the group admin. Trolls will be booted out
+        of the group.\n
+        - Fundamentally irrelevant content may be taken off.\n
+        - Please do not repost contents that was removed since
+        they were considered inappropriate.\n
+
+        These rules are really designed to keeping an enjoyable
+        experience :)"
+
+      </string>
+</resources>

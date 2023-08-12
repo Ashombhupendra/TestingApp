@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="10dp"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/bg_poses_text"
+    android:backgroundTint="@color/blue_gray"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_reviews_profilepic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/profile_image_bg"
+        android:layout_centerHorizontal="true"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/verified_profile"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/badge"
+        android:layout_marginEnd="-20dp"
+        app:layout_constraintBottom_toBottomOf="@id/item_reviews_profilepic"
+        app:layout_constraintEnd_toEndOf="@id/item_reviews_profilepic"
+        android:elevation="20dp"/>
+     <TextView
+         android:id="@+id/item_review_name"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         app:layout_constraintStart_toEndOf="@id/item_reviews_profilepic"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:text="Nitin"
+         android:layout_marginHorizontal="10dp"
+         android:textColor="@color/blue_dark"
+         android:textSize="18sp"
+         android:textStyle="bold"
+         tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/item_review_usercategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_review_name"
+        app:layout_constraintStart_toEndOf="@id/item_reviews_profilepic"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Drone"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/item_review_comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_review_usercategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="nyc images "
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginVertical="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="photoshootsdto"
+            type="com.dbvertex.job.network.response.photoshoot.ImagePhotoshootlistDTO" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_photoshoot_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        <TextView
+            android:id="@+id/item_photoshoot_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="15sp"
+            android:paddingVertical="5dp"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@{photoshootsdto.title}"
+            app:layout_constraintEnd_toStartOf="@id/item_photoshoot_edit"
+            android:textColor="@color/black"
+            tools:text="@tools:sample/full_names"/>
+        <ImageView
+            android:id="@+id/item_photoshoot_edit"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:paddingHorizontal="10dp"
+            android:src="@{photoshootsdto.isAdded ? @drawable/correct : @drawable/plus}"
+            app:layout_constraintTop_toTopOf="@id/item_photoshoot_title"
+            app:layout_constraintBottom_toBottomOf="@id/item_photoshoot_title"
+            tools:src="@drawable/correct"
+             />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_photoshoot_title"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

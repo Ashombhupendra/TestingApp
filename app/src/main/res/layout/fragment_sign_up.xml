@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="usertype"
+            type="Integer" />
+
+        <variable
+            name="viewModel"
+            type="com.dbvertex.job.peresentation.auth.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_signup_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".peresentation.createuser.SignUp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Complete your Profile"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/com_pro_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/white"
+                    android:capitalize="sentences"
+                    android:elevation="5dp"
+                    android:hint="First Name"
+                    android:maxLength="30"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.firstname}"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_dark"
+                    android:textColorHint="@color/hint_color"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+                <EditText
+                    android:id="@+id/com_pro_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/white"
+                    android:capitalize="sentences"
+                    android:elevation="5dp"
+                    android:hint="Last Name"
+                    android:maxLength="30"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.lastname}"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_dark"
+                    android:textColorHint="@color/hint_color"
+                    app:layout_constraintTop_toBottomOf="@id/com_pro_first_name" />
+
+                <View
+                    android:id="@+id/clickdob"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:elevation="10dp"
+                    app:layout_constraintTop_toTopOf="@id/dob"
+                    app:layout_constraintBottom_toBottomOf="@id/dob"
+                    app:layout_constraintEnd_toEndOf="@id/dob"
+                    app:layout_constraintStart_toStartOf="@id/dob"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/white"
+                    android:elevation="5dp"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/com_pro_last_name">
+
+                    <EditText
+                        android:id="@+id/com_pro_dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:editable="false"
+                        android:hint="Date of Birth"
+                        android:text="@={viewModel.dateofbirth}"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="17sp"
+                        app:layout_constraintEnd_toStartOf="@id/calender"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/calender"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/calender"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/com_pro_manualaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/white"
+                    android:drawableRight="@drawable/ic_baseline_location_on_24"
+                    android:elevation="5dp"
+                    android:hint="Add Address"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.per_address}"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_dark"
+                    android:textColorHint="@color/hint_color"
+                    app:layout_constraintTop_toBottomOf="@id/static_address" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/company_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/white"
+                    android:elevation="5dp"
+                    android:padding="2dp"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/com_pro_manualaddress"
+                    tools:listitem="@layout/item_autocomplete" />
+
+                <EditText
+                    android:id="@+id/static_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/white"
+                    android:capitalize="sentences"
+                    android:elevation="5dp"
+                    android:hint="Address"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.address}"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_dark"
+                    android:textColorHint="@color/hint_color"
+                    app:layout_constraintTop_toBottomOf="@id/dob" />
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/register_as_a_label"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="I want to register as a"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/company_recycler" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/type"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingHorizontal="30dp"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/register_as_a_label">
+
+                    <TextView
+                        android:id="@+id/com_pro_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_text"
+                        android:backgroundTint="@{usertype == 1 ? @color/blue_dark : @color/white}"
+                        android:elevation="5dp"
+                        android:padding="5dp"
+                        android:text="Company"
+                        android:textAlignment="center"
+                        android:textColor="@{usertype == 1 ? @color/white : @color/blue_dark}"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/com_pro_freelancer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_text"
+                        android:backgroundTint="@{usertype == 2 ? @color/blue_dark : @color/white}"
+                        android:elevation="5dp"
+                        android:padding="5dp"
+                        android:text="Freelancer"
+                        android:textAlignment="center"
+                        android:textColor="@{usertype == 2 ? @color/white : @color/blue_dark}" />
+
+                    <TextView
+                        android:id="@+id/com_pro_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_text"
+                        android:backgroundTint="@{usertype == 3 ? @color/blue_dark : @color/white}"
+                        android:elevation="5dp"
+                        android:padding="5dp"
+                        android:text="Others"
+                        android:textAlignment="center"
+                        android:textColor="@{usertype == 3 ? @color/white : @color/blue_dark}" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/type_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:drawableLeft="@drawable/ic_baseline_error_outline_24"
+                    android:drawablePadding="5dp"
+                    android:text="Select your type.."
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/type"
+                    app:layout_constraintTop_toBottomOf="@id/type" />
+
+                <EditText
+                    android:id="@+id/com_pro_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/white"
+                    android:capitalize="sentences"
+                    android:elevation="5dp"
+                    android:hint="Username"
+                    android:maxLength="50"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="10dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.username}"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_dark"
+                    android:textColorHint="@color/hint_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/type" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:id="@+id/check_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:elevation="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/com_pro_username">
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        style="@style/CustomCheckbox02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/check_box_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="3"
+                        android:text="@string/check"
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/checkBox"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/create_my_acc"
+                    app:backgroundTint="@color/blue"
+                    android:background="@drawable/bg_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:elevation="10dp"
+                    android:textColor="@color/white"
+                    android:text="Create My Account"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/check_des"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/terms_servies"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/create_my_acc" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

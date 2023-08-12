@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_card_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/bottom_sheet_checklist_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add CheckList Item"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="40dp"
+        android:backgroundTint="@color/blue_dark"
+        android:textColor="@color/blue_dark"
+        android:paddingVertical="0dp"
+        android:textSize="20sp"
+        android:layout_marginVertical="20dp"
+        android:paddingHorizontal="20dp"
+        />
+
+    <EditText
+        android:id="@+id/bottom_sheet_checklist_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_checklist_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Enter Message Here"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:maxLength="150"
+        android:backgroundTint="#CCC8C8"
+        android:layout_marginVertical="10dp"
+        android:textColorHint="@color/grey"/>
+
+    <TextView
+        android:id="@+id/bottom_sheet_checklist_saved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_checklist_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bg_free_item"
+        android:layout_marginHorizontal="40dp"
+        android:backgroundTint="@color/blue_dark"
+        android:textColor="@color/white"
+        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:textStyle="bold"
+        android:paddingHorizontal="20dp"
+        />
+    <ImageView
+        android:id="@+id/bottom_sheet_checklist_close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/cancel_new"
+        android:backgroundTint="@color/blue_dark"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"
+        android:padding="4dp"
+        app:tint="@color/white" />
+    <ImageView
+        android:id="@+id/bottom_sheet_checklist_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"
+        android:padding="4dp"
+        app:tint="@color/blue_dark" />
+</androidx.constraintlayout.widget.ConstraintLayout>

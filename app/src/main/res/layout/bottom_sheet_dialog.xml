@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_text"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:id="@+id/bottom_sheet"
+    android:backgroundTint="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/bottomSheet_camera"
+        android:layout_width="@dimen/bottomsheet_icon_size"
+        android:layout_height="@dimen/bottomsheet_icon_size"
+        android:layout_weight="1"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/blue_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_camera_24"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_camera_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottomSheet_camera"
+        android:textColor="@color/black"
+        android:text="Camera"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/bottomSheet_camera"
+        app:layout_constraintEnd_toEndOf="@id/bottomSheet_camera"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/bottomSheet_gallery"
+        android:layout_width="@dimen/bottomsheet_icon_size"
+        android:layout_height="@dimen/bottomsheet_icon_size"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="@id/bottomSheet_camera"
+        app:layout_constraintStart_toEndOf="@id/bottomSheet_camera"
+        app:layout_constraintEnd_toStartOf="@id/bottomSheet_document"
+        android:backgroundTint="@color/blue_gray"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/ic_baseline_image_24"
+        app:tint="@color/red" />
+    <TextView
+        android:id="@+id/bottom_sheet_gallery_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottomSheet_gallery"
+        android:textColor="@color/black"
+        android:text="Gallery"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/bottomSheet_gallery"
+        app:layout_constraintEnd_toEndOf="@id/bottomSheet_gallery"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/bottomSheet_document"
+        android:layout_width="@dimen/bottomsheet_icon_size"
+        android:layout_height="@dimen/bottomsheet_icon_size"
+        android:layout_weight="1"
+        android:padding="15dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomSheet_camera"
+        android:backgroundTint="@color/blue_gray"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/bottomsheet_google_docs"
+        />
+    <TextView
+        android:id="@+id/bottom_sheet_document_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottomSheet_document"
+        android:textColor="@color/black"
+        android:text="Document"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/bottomSheet_audio"
+        android:layout_width="@dimen/bottomsheet_icon_size"
+        android:layout_height="@dimen/bottomsheet_icon_size"
+        android:layout_weight="1"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_camera_tv"
+        android:layout_marginVertical="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/blue_gray"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/ic_baseline_music_note_24"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_audio_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottomSheet_audio"
+        android:textColor="@color/black"
+        android:text="Audio"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/bottomSheet_audio"
+        app:layout_constraintEnd_toEndOf="@id/bottomSheet_audio"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/bottomSheet_vedio"
+        android:layout_width="@dimen/bottomsheet_icon_size"
+        android:layout_height="@dimen/bottomsheet_icon_size"
+        android:layout_weight="1"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="@id/bottomSheet_audio"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_gallery_tv"
+        android:backgroundTint="@color/blue_gray"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/bottomsheetvideo"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_vedio_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottomSheet_vedio"
+        android:textColor="@color/black"
+        android:text="Video"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/bottomSheet_vedio"
+        app:layout_constraintEnd_toEndOf="@id/bottomSheet_vedio"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/bottomSheet_delete_profile"
+        android:layout_width="@dimen/bottomsheet_icon_size"
+        android:layout_height="@dimen/bottomsheet_icon_size"
+        android:layout_weight="1"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/bottomSheet_document"
+        android:backgroundTint="@color/blue_gray"
+        android:background="@drawable/bg_button"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/bottomSheet_delete_profile_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottomSheet_delete_profile"
+        android:textColor="@color/black"
+        android:text="Remove"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/bottomSheet_delete_profile"
+        app:layout_constraintEnd_toEndOf="@id/bottomSheet_delete_profile"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.dbvertex.job.peresentation.photoshoot.PhotoShootViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/offline_toolbar"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/white"
+            android:layout_height="?attr/actionBarSize">
+
+
+            <ImageView
+                android:id="@+id/back_offline_podcast"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingHorizontal="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:tint="@color/blue_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.category_name}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/blue_dark"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                tools:text="@tools:sample/full_names"/>
+            <TextView
+                android:id="@+id/save_photoshoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/blue_dark"
+                android:layout_marginEnd="10dp"
+                android:textSize="15sp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/fav_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            android:background="@color/white"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+            app:tabSelectedTextColor="@color/blue_dark"
+            app:tabIndicatorColor="@color/blue_dark"
+            app:tabTextColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/offline_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:id="@+id/no_tab_enable"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="15dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="@id/fav_tablayout"
+            app:layout_constraintBottom_toBottomOf="@id/fav_tablayout"
+            app:layout_constraintStart_toStartOf="@id/fav_tablayout"
+            app:layout_constraintEnd_toEndOf="@id/fav_tablayout"
+            android:orientation="horizontal" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/fav_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fav_tablayout"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

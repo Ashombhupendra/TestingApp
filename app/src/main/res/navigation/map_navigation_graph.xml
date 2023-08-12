@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_navigation_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.dbvertex.job.peresentation.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.dbvertex.job.peresentation.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.dbvertex.job.peresentation.introduction.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/fragment_intro"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.dbvertex.job.peresentation.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/otp_Fragment"
+        android:name="com.dbvertex.job.peresentation.auth.Otp_Fragment"
+        android:label="Otp_Fragment"
+        tools:layout="@layout/fragment_otp_"/>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.dbvertex.job.peresentation.createuser.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/companyFragment"
+        android:name="com.dbvertex.job.peresentation.company_signup.CompanyFragment"
+        android:label="fragment_company"
+        tools:layout="@layout/fragment_company" />
+    <fragment
+        android:id="@+id/frrelancerFragment"
+        android:name="com.dbvertex.job.peresentation.freelancer_signup.FrrelancerFragment"
+        android:label="fragment_frrelancer"
+        tools:layout="@layout/fragment_frrelancer" />
+    <fragment
+        android:id="@+id/otherSignup"
+        android:name="com.dbvertex.job.peresentation.other_signup.OtherSignup"
+        android:label="fragment_other_signup"
+        tools:layout="@layout/fragment_other_signup" />
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.dbvertex.job.peresentation.dashboard.HomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" />
+    <fragment
+        android:id="@+id/blogsPage"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.blog.BlogsPage"
+        android:label="fragment_blogs_page"
+        tools:layout="@layout/fragment_blogs_page" />
+    <fragment
+        android:id="@+id/discussPage"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.discuss.DiscussPage"
+        android:label="fragment_discuss_page"
+        tools:layout="@layout/fragment_discuss_page" />
+    <fragment
+        android:id="@+id/educationPage"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.education.EducationPage"
+        android:label="fragment_education_page"
+        tools:layout="@layout/fragment_education_page" />
+    <fragment
+        android:id="@+id/freelacerPage"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.freelancer.FreelacerPage"
+        android:label="fragment_freelacer_page"
+        tools:layout="@layout/fragment_freelacer_page" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dbvertex.job.peresentation.userprofile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/galleryUploadImages"
+        android:name="com.dbvertex.job.peresentation.userprofile.gallery.GalleryUploadImages"
+        android:label="GalleryUploadImages"
+        tools:layout="@layout/fragment_gallery_upload_images"/>
+    <dialog
+        android:id="@+id/addEquipmentDialog"
+        android:name="com.dbvertex.job.peresentation.freelancer_signup.AddEquipmentDialog"
+        android:label="AddEquipmentDialog"
+        tools:layout="@layout/fragment_add_equipment_dialog"/>
+    <fragment
+        android:id="@+id/blogDetails"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.blog.BlogDetails"
+        android:label="BlogDetails"
+        tools:layout="@layout/fragment_blog_details"/>
+    <fragment
+        android:id="@+id/freelancerUsers"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.freelancer.FreelancerUsers"
+        android:label="FreelancerUsers"
+        tools:layout="@layout/fragment_freelancer_users"/>
+    <fragment
+        android:id="@+id/FUProfile"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.freelancer.FUProfile"
+        android:label="FUProfile"
+        tools:layout="@layout/fragment_f_u_profile"/>
+    <dialog
+        android:id="@+id/FUCalenderDialog"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.freelancer.FUCalenderDialog"
+        android:label="FUCalenderDialog"
+        tools:layout="@layout/fragment_f_u_calender_dialog"/>
+    <fragment
+        android:id="@+id/freelencerFilter"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.freelancer.FreelencerFilter"
+        android:label="FreelencerFilter" />
+    <fragment
+        android:id="@+id/educationDetail"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.education.EducationDetail"
+        android:label="EducationDetail"
+        tools:layout="@layout/fragment_education_detail">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/addQuestion_frag"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.discuss.AddQuestion_frag"
+        android:label="fragment_add_question_frag"
+        tools:layout="@layout/fragment_add_question_frag" />
+    <fragment
+        android:id="@+id/discussDetail"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.discuss.DiscussDetail"
+        android:label="DiscussDetail"
+        tools:layout="@layout/fragment_discuss_detail"/>
+    <fragment
+        android:id="@+id/resourcesFrag"
+        android:name="com.dbvertex.job.peresentation.resources.ResourcesFrag"
+        android:label="fragment_resources"
+        tools:layout="@layout/fragment_resources" />
+    <fragment
+        android:id="@+id/resourcesDetails"
+        android:name="com.dbvertex.job.peresentation.resources.ResourcesDetails"
+        android:label="ResourcesDetails"
+        tools:layout="@layout/fragment_resources_details"/>
+    <fragment
+        android:id="@+id/jobBoardMain"
+        android:name="com.dbvertex.job.peresentation.jobboard.JobBoardMain"
+        android:label="JobBoardMain"
+        tools:layout="@layout/fragment_job_board_main"/>
+    <fragment
+        android:id="@+id/jobBoardDetail"
+        android:name="com.dbvertex.job.peresentation.jobboard.JobBoardDetail"
+        android:label="JobBoardDetail"
+        tools:layout="@layout/fragment_job_board_detail"/>
+    <fragment
+        android:id="@+id/inspirationFrag"
+        android:name="com.dbvertex.job.peresentation.inspiration.InspirationFrag"
+        android:label="Inspiration"
+        tools:layout="@layout/fragment_inspiration"/>
+    <fragment
+        android:id="@+id/inspirationDetail"
+        android:name="com.dbvertex.job.peresentation.inspiration.InspirationDetail"
+        android:label="InspirationDetail"
+        tools:layout="@layout/fragment_inspiration_detail"/>
+    <fragment
+        android:id="@+id/chatHome"
+        android:name="com.dbvertex.job.peresentation.chat.ChatHome"
+        android:label="Chat" />
+    <fragment
+        android:id="@+id/chatMessage"
+        android:name="com.dbvertex.job.peresentation.chat.ChatMessage"
+        android:label="Message" />
+    <fragment
+        android:id="@+id/notificationFrag"
+        android:name="com.dbvertex.job.notification.NotificationFrag"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification"/>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.dbvertex.job.peresentation.settings.Settings"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"/>
+    <dialog
+        android:id="@+id/logout"
+        android:name="com.dbvertex.job.peresentation.settings.Logout"
+        android:label="Logout"
+        tools:layout="@layout/dialog_logout"/>
+    <fragment
+        android:id="@+id/podcast"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.blog.podcast.Podcast"
+        android:label="Podcast"
+        tools:layout="@layout/fragment_podcast"/>
+    <fragment
+        android:id="@+id/updatePersonalPro"
+        android:name="com.dbvertex.job.peresentation.userprofile.updateprofile.UpdatePersonalPro"
+        android:label="UpdatePersonal"
+        tools:layout="@layout/fragment_update_personal_pro"/>
+    <fragment
+        android:id="@+id/updatefreelencerpro"
+        android:name="com.dbvertex.job.peresentation.userprofile.updateprofile.Updatefreelencerpro"
+        android:label="Updatefreelencerpro"
+        tools:layout="@layout/fragment_updatefreelencerpro"/>
+    <fragment
+        android:id="@+id/posesHome"
+        android:name="com.dbvertex.job.peresentation.poses.PosesHome"
+        android:label="Poses List" />
+    <fragment
+        android:id="@+id/posesList"
+        android:name="com.dbvertex.job.peresentation.poses.PosesList"
+        android:label="PosesList" />
+    <dialog
+        android:id="@+id/addReviewDialog"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.freelancer.AddReviewDialog"
+        android:label="AddReviewDialog" />
+    <fragment
+        android:id="@+id/favoritesHome"
+        android:name="com.dbvertex.job.peresentation.favorites.FavoritesHome"
+        android:label="Favourite" />
+    <fragment
+        android:id="@+id/posesDetail"
+        android:name="com.dbvertex.job.peresentation.poses.PosesDetail"
+        android:label="Poses Detail"
+        tools:layout="@layout/fragment_poses_detail" />
+    <fragment
+        android:id="@+id/searchDiscuss"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.discuss.SearchDiscuss"
+        android:label="SearchDiscuss"
+        tools:layout="@layout/fragment_search_discuss"/>
+    <fragment
+        android:id="@+id/userSchedule"
+        android:name="com.dbvertex.job.peresentation.userprofile.calendar.UserSchedule"
+        android:label="UserSchedule"
+        tools:layout="@layout/fragment_user_schedule"/>
+    <dialog
+        android:id="@+id/addeventDialog"
+        android:name="com.dbvertex.job.peresentation.userprofile.calendar.AddeventDialog"
+        android:label="AddeventDialog"
+        tools:layout="@layout/dialog_add_event"/>
+    <dialog
+        android:id="@+id/otherUserConfirmation"
+        android:name="com.dbvertex.job.peresentation.other_signup.OtherUserConfirmation"
+        android:label="OtherUserConfirmation"
+        tools:layout="@layout/dialog_other_user_confirmation"/>
+    <fragment
+        android:id="@+id/offlinePodcast"
+        android:name="com.dbvertex.job.peresentation.offlinepodcast.OfflinePodcast"
+        android:label="Offline"
+        tools:layout="@layout/fragment_offline_podcast" />
+    <fragment
+        android:id="@+id/podcastSearch"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.blog.podcast.PodcastSearch"
+        android:label="PodcastSearch"
+        />
+    <fragment
+        android:id="@+id/webviewFragment"
+        android:name="com.dbvertex.job.peresentation.settings.WebviewFragment"
+        android:label="Webview Fragment" />
+    <fragment
+        android:id="@+id/create_Photoshoot"
+        android:name="com.dbvertex.job.peresentation.photoshoot.CreatePhotoshoot"
+        android:label="CreatePhotoshoot" />
+    <fragment
+        android:id="@+id/photoshootMain"
+        android:name="com.dbvertex.job.peresentation.photoshoot.PhotoshootMain"
+        android:label="PhotoshootMain" />
+    <fragment
+        android:id="@+id/addPosesImage"
+        android:name="com.dbvertex.job.peresentation.photoshoot.poses.AddPosesImage"
+        android:label="AddPosesImage" />
+    <fragment
+        android:id="@+id/editPhotoShootQuestionnaire"
+        android:name="com.dbvertex.job.peresentation.photoshoot.questionnaire.EditPhotoShootQuestionnaire"
+        android:label="EditPhotoShootQuestionnaire" />
+    <fragment
+        android:id="@+id/photoshoot_Presaved_detail"
+        android:name="com.dbvertex.job.peresentation.photoshoot.presaved.Photoshoot_Presaved_detail"
+        android:label="Photoshoot_Presaved_detail" />
+    <fragment
+        android:id="@+id/photoShootAddTimeLine"
+        android:name="com.dbvertex.job.peresentation.photoshoot.timeline.PhotoShootAddTimeLine"
+        android:label="PhotoShootAddTimeLine" />
+    <fragment
+        android:id="@+id/edit_Contract"
+        android:name="com.dbvertex.job.peresentation.photoshoot.contract.Edit_Contract"
+        android:label="fragment_edit__contract"
+        tools:layout="@layout/fragment_edit__contract" />
+    <fragment
+        android:id="@+id/previewContract"
+        android:name="com.dbvertex.job.peresentation.photoshoot.contract.PreviewContract"
+        android:label="fragment_preview_contract"
+        tools:layout="@layout/fragment_preview_contract" />
+    <dialog
+        android:id="@+id/dialog_add_invoice_item"
+        android:name="com.dbvertex.job.peresentation.photoshoot.invoice.Dialog_add_invoice_item"
+        android:label="Dialog_add_invoice_item" />
+    <fragment
+        android:id="@+id/updateJob"
+        android:name="com.dbvertex.job.peresentation.jobboard.UpdateJob"
+        android:label="UpdateJob" />
+    <fragment
+        android:id="@+id/beforepostingDialog"
+        android:name="com.dbvertex.job.peresentation.navigate_to_page.discuss.BeforepostingDialog"
+        android:label="BeforepostingDialog" />
+    <fragment
+        android:id="@+id/publishingGuidelines"
+        android:name="com.dbvertex.job.peresentation.jobboard.postjob.PublishingGuidelines"
+        android:label="PublishingGuidelines"
+        tools:layout="@layout/fragment_publishing_guidelines"/>
+    <fragment
+        android:id="@+id/contact_Us"
+        android:name="com.dbvertex.job.peresentation.settings.Contact_Us"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact__us"/>
+
+
+</navigation>
